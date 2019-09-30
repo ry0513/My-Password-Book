@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/password/index",
+    "pages/password/home/home",
+    "pages/password/add/add",
+    "pages/password/update/update",
+    "pages/password/setting/setting",
+    "pages/password/about/about",
+    "pages/password/edition/edition",
+    "pages/password/bgColor/bgColor",
+    "pages/password/help/help"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "ColorUI",
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "sitemapLocation": "sitemap.json"
+}

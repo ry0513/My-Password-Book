@@ -1,0 +1,25 @@
+<cu-custom bgColor="{{bgColor}}" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">其他</view>
+</cu-custom>
+<view class="page">
+  <view class="about">
+    <button open-type="contact"><text>联系客服</text><text class="icon cuIcon-back"></text></button>
+    <button open-type="feedback"><text>意见反馈</text><text class="icon cuIcon-back"></text></button>
+    <button bindtap="help"><text>使用帮助</text><text class="icon cuIcon-back {{help_on?'active':''}}"></text></button>
+    <view class="help_text {{help_on?'active':''}}">
+      <view><text>添加账号：</text>点击添加，填入信息并保存（注：默认保存到本地）</view>
+      <view><text>修改或删除账号：</text>点击卡片右上角的三个小点，选择操作</view>
+      <view><text>上传云端：</text>暂未开放</view>
+      <view><text>云端下载：</text>暂未开放</view>
+      <view><text>模糊搜索：</text>暂未开放</view>
+      <view><text>友情提示：</text>本人不会保存任何数据，但也希望不要保存私密账号（比如财务类）</view>
+    </view>
+  </view>
+  <view class="br"></view>
+  <view class="about">
+    <button bindtap="me"><text>联系作者</text><text class="icon cuIcon-back"></text></button>
+  </view>
+  <view style="height:100rpx;"></view>
+  <view class='edition' bindtap="edition">版本号：{{version}}</view>
+</view>

@@ -1,0 +1,64 @@
+/* miniprogram/pages/password/edition/edition.wxss */
+.edition{
+  display: flex;
+}
+.left{
+  width: 120rpx;
+  display: flex;
+  flex-direction: column;
+}
+.left>view{
+  box-shadow: 10rpx 10rpx 20rpx rgba(11, 51, 8, 0.836);
+}
+.left>view:nth-child(1){
+  width: 4rpx;
+  margin: auto;
+  height: 50rpx;
+}
+.left>view:nth-child(2){
+  width: 20rpx;
+  height: 20rpx;
+  border-radius: 50%;
+  margin: 20rpx auto;
+}
+.left>view:nth-child(3){
+  width: 4rpx;
+  margin: auto;
+  flex-grow: 1;
+}
+.right{
+  width: 630rpx;
+  padding: 40rpx 40rpx 40rpx 0;
+}
+.right>view{
+  border-radius: 10rpx;
+  box-shadow: 10rpx 10rpx 20rpx rgba(11, 51, 8, 0.404);
+  padding: 30rpx;
+}
+.right>view>view:first-child{
+  background: #ffffff;
+  width: auto;
+  display: inline-block;
+  border-radius: 5rpx;
+  border: 2rpx solid #ffffff; 
+  box-sizing: border-box;
+  font-size: 28rpx;
+}
+.right>view>view>text:first-child{
+  display: inline-block;
+  padding: 15rpx;
+  color: #fff;
+  border-radius: 5rpx;
+}
+.right>view>view>text:last-child{
+  display: inline-block;
+  padding: 15rpx;
+}
+.right>view>view:last-child{
+  color: #fff;
+  padding-top: 10rpx; 
+  font-size: 28rpx;
+}
+.right>view>view:last-child>view{
+  padding: 7rpx 0; 
+}

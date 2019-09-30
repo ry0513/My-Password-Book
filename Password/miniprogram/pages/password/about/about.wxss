@@ -1,0 +1,75 @@
+/* miniprogram/pages/password/about/about.wxss */
+page{
+  background: #f6f6f6;
+  position: relative;
+  min-height: 100vh;
+}
+.about{
+  padding: 0 20rpx;
+  background: #ffffff;
+}
+.about button{
+  text-align: left;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  background: inherit;
+  border-bottom: 2rpx solid #f3f3f3;
+  display: flex;
+  justify-content: space-between;
+}
+.about button:after{
+  border: none;
+}
+.br{
+  background: #f3f3f3;
+  height: 50rpx;
+}
+.agreement_text,.help_text{
+  background: #f3f3f3;
+  margin: 0 -20rpx;
+  padding: 0rpx 40rpx;
+  font-size: 28rpx;
+  color: rgb(83, 85, 97);
+  overflow: hidden;
+  height: 0;  
+  transition: 0.2s all;
+}
+.agreement_text.active{
+   padding: 10rpx 40rpx;
+   height: 600rpx;
+}
+.help_text.active{
+   padding: 10rpx 40rpx;
+   height: 460rpx;
+}
+.agreement_text>view,.help_text>view{
+  padding: 10rpx 0;
+}
+.help_text text{
+  font-weight: 700;
+}
+
+.icon{
+  width: 60rpx;
+  text-align: center;
+  margin: 20rpx 0;
+  display: inline-block;
+  transform: rotate(180deg);
+  background-size: 30rpx;
+  transition: 0.2s all;
+  line-height: 60rpx;
+  color: #a09999;
+}
+.icon.active{
+  transform: rotate(270deg);
+}
+
+.edition{
+  text-align: center;
+  font-size: 24rpx;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 40rpx;
+  color:#a09999;
+}

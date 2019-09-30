@@ -1,0 +1,2 @@
+/* miniprogram/pages/password/add/add.wxss */
+@import "../style/add.wxss";

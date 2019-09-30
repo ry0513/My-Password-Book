@@ -1,0 +1,20 @@
+<cu-custom bgColor="{{bgColor}}" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">帮助</view>
+</cu-custom>
+
+<view class="help">
+<view class="fw">使用说明：</view>
+    <view>1.默认是保存为本地(小程序缓存)中</view>
+    <view>2.登陆密码可以在【设置】中修改(若首次通过指纹进入本程序则为设置密码)</view>
+    <view>3.上传云端需要设置云端密码用于AES加密上传(云端密码不会上传,请自己牢记)下载需要再次输入改云端密码，否则无法解密</view>
+    <view>4.如果开启了自动上传，所设置的云端密码保存在本地缓存</view>
+    <view>5.首页，点击账号复制账号，点击密码复制密码，点击名称复制账号和密码</view>
+  <view>
+  <view style="height:100rpx;"></view>
+  <view class="fw">注意事项：</view>
+    <view>1.上传云端会覆盖之前的记录(如果有云端记录的话)</view>
+    <view>2.恢复到本地会覆盖之前的记录</view>
+    <view>3.云端密码以最后一次上传(包括手动上传或自动上传)为准，忘记将无法恢复</view>
+  </view>
+</view>

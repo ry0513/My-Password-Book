@@ -1,0 +1,33 @@
+<!--miniprogram/pages/password/bgColor/bgColor.wxml-->
+<cu-custom bgColor="{{bgColor}}" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">外观设置</view>
+</cu-custom>
+<view class="cu-bar bg-white solid-bottom">
+  <view class="action">
+    <text class="cuIcon-title {{fontColor}}"></text>纯色背景
+  </view>
+</view>
+<view class="grid col-3 padding-sm">
+  <view class="padding-sm" wx:for="{{ColorList}}" wx:key="{{item.name}}">
+    <view>
+      <view class="bg-{{item.name}} padding radius text-center shadow-blur" data-index="{{index}}" bindtap="bindtapColorList">
+        <view class="text-lg" data-index="{{index}}">{{item.title}}</view>
+        <view class="margin-top-sm text-Abc" data-index="{{index}}">{{item.name}}</view>
+      </view>
+    </view>  
+  </view>
+</view>
+<view class="cu-bar bg-white solid-bottom margin-top">
+  <view class="action">
+    <text class="cuIcon-title {{fontColor}}"></text>渐变背景
+  </view>
+</view>
+<view class="grid col-2 padding-sm">
+  <view class="padding-sm" wx:for="{{GradualColorList}}" wx:key>
+    <view class="{{item.bg}} padding radius text-center shadow-blur" data-index="{{index}}" bindtap="bindtapGradualColorList">
+      <view class="text-lg"  data-index="{{index}}">{{item.title}}</view>
+      <view class="margin-top-sm text-Abc" data-index="{{index}}">{{item.name}}</view>
+    </view>
+  </view>
+</view>

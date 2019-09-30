@@ -1,0 +1,140 @@
+/* miniprogram/pages/password/cloud/cloud.wxss */
+page{
+  background: #f6f6f6;
+}
+.container{
+  height: 300rpx;
+}
+.userinfo-avatar{
+  width: 150rpx;
+  height: 150rpx;
+  background-size: 100%; 
+  margin: auto;
+  border-radius: 50%;
+  border: 5rpx solid #CFB53B;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHIAAAByCAMAAAC4A3VPAAAAM1BMVEX////X19j9/f3b29ze3t/s7O3k5OX6+vvv7+/y8vL4+Pjp6eri4uL09PT29vbg4OHm5uebAlFgAAADQklEQVRo3rWaS3LlIAxFLSF+BoP3v9ru6kmqq5L4YPTOOHkXfZAE5lgk15imhSB/CWbzjpceH0Nrm/IdoX9Et6Ygv2L35al3NiGEmJ0EiwmmV4cAliBLWHUT5NhOUGuQV8zzbdJMec2tb3x6yxZl3cQgm/RFQ6PsE8bB0S4uRF66gzjRFYfRjYk0h3hiQPMSX0LetdHfzlP8MQW56kz/RVGDfIT0s+SUDxF3q9xs5fpHaSaMcydZreh/0Y8oGEFfB/L+ZrlXehvO9L7bX2C1FbmVNwZNb1xr8sS112Db+r8M1NR51ub9WeZeLEI3dstGIalLRk4yvsgDtrRBTpcZrS60rHQgAjcz0WzdN5MHgaE4aYvbPNrlAaWFJwM1tvgCd0g4KCcMUQP5ShHmMAOhpEz0WwpaHSahnK1rPWS3n6CKLieXLGj9wVcSBDOLlySLUkcnreEpGYgr5PJ0rOjRxHOTRBKm7nmFwwwIAsZBTCfTMDofUogBN5HknUTR6UQAur9HvphIsjhmjxiSTFTSUJjEMZgqBCDJ6090lEzQr46SonTY4rF0GX9uEZixXgmUBUoGQRQvI6UfE5qpTkbKDdYG20nHl2tRIBmUV0IFf4pamAa+9FMoBbgVAOoicm0Uii1dwpo6fAO4QY8DmqdwKlghSKEgHP1qcgzdNdKWb9QrGNFBRYnCiWDiAecb3ZVMgglgGxPHtvUl1830KevVRDdrngplrjZXibvFpyx21z6OnzgTTh6ec/bwykULO6hiMzuZnXMDRkIz74xfsdhDKrAy2fKxQDU8sTVg4aZoRbNLyn5vdjopITaOl5SA7sgMbHyMJjIHZ/KOhXMFMMNU8qCEowamw4aOA5wEjuHzK59daOD7bvBU/GpR6fHBRjncSM9fIk8WR449P4UZYocnGRyGr+QqqaRmjqSORrIfO3v2Ujzp8jN9hukYJE3FpRIsNYaYdD+Mi41h9HPTqeuL1rttGKrtVWjGfF1rY8pv4//Ou1evO/sqjWOR2qPu5V1bWrKWXvTYRWNvA3r0Tl6tdtzWzmc9i/nwQ0sKd9UfY166tXG4M+K0FMv4TzhfpSVLJR+f4vynYCHYNAtmM8UyFuX+AEjTKaaKPjG1AAAAAElFTkSuQmCC)
+}
+.userinfo-nickname{
+  text-align:center;
+  padding-top: 50rpx; 
+}
+
+.list{
+
+}
+.icon{
+  transform: rotate(180deg);
+  width: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin-right: -20rpx;
+}
+.listTitle{
+  padding: 20rpx 20rpx 10rpx;
+  color: #968d8d;
+  font-size: 24rpx;
+}
+.listItem{
+  padding: 0rpx 20rpx;
+  line-height: 100rpx;
+}
+.listItem>view{
+  border-bottom: #f1f1f1 solid 2rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.listItem .open{
+  background: #999999;
+  width: 100rpx;
+  height: 52rpx;
+  margin: auto 0;
+  border-radius: 26rpx;
+  position: relative;
+}
+.listItem .open.active{
+  background: #07C160;
+  width: 100rpx;
+  height: 52rpx;
+  margin: auto 0;
+  border-radius: 26rpx;
+}
+.listItem .open>view{
+  background: #ffffff;
+  width: 52rpx;
+  height: 52rpx;
+  border: 5rpx solid #999999;
+  border-radius: 26rpx;
+  position: absolute;
+  left: 0;
+  transition: all 0.25s;
+}
+
+.listItem .open.active>view{
+  background: #ffffff;
+  border: 5rpx solid #07C160;
+  left: calc(100% - 52rpx);
+}
+.listItem>view:last-child{
+  border-bottom: none;
+}
+.modal {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 9999;
+	opacity: 0;
+	background: rgba(0, 0, 0, 0.6);
+	transition: all 0.3s ease-in-out 0s;
+	pointer-events: none;
+}
+.modal.show {
+	opacity: 1;
+	transition-duration: 0.3s;
+	overflow-x: hidden;
+	overflow-y: auto;
+	pointer-events: auto;
+}
+.modal .box{
+  width: 80vw;
+  position: absolute;
+  background: #fff;
+  top:40%;
+  left: calc(50% - 40vw);
+  border-radius: 5rpx;
+}
+.modal .title{
+  text-align: center;
+  font-size: 32rpx;
+  padding: 30rpx 20rpx 20rpx;
+}
+.modal .input{
+  padding: 10rpx 50rpx 20rpx;
+}
+.modal input{
+  font-size: 28rpx;
+  height: 30rpx;
+  width: 100%;
+}
+.modal .warning{
+  padding: 20rpx 0;
+  color: #968d8d;
+  font-size: 24rpx;
+}
+.modal .warning>view{
+  padding: 5rpx 0;
+}
+.modal .choice{
+  display: flex;
+  justify-content: space-between;
+}
+.modal .choice>view{
+  text-align: center;
+  width: 50%;
+  border-top: #E8E7E9 2rpx solid;
+  line-height: 80rpx;
+}
+.modal .choice>view:first-child{
+  border-right: #E8E7E9 2rpx solid; 
+}

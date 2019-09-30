@@ -1,0 +1,50 @@
+<cu-custom bgColor="{{bgColor}}" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content"></view>
+</cu-custom>
+
+<view class="container {{bgColor}}">
+    <view class="userinfo">
+      <view wx:if="{{hasUserInfo}}" class="userinfo-avatar" style="background-image: url({{avatarUrl}})"></view>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="onGetUserInfo" class="userinfo-avatar"></button>
+    <view> 
+      <view class="userinfo-nickname">{{hasUserInfo?userInfo.nickName:'点击上方头像授权'}}</view>
+    </view>
+  </view>
+</view>
+<view class="list">
+  <view class="listTitle">密码相关设置</view>
+  <view class="listItem bg-white">
+    <view bindtap="binduser_password"><text>设置或修改登陆密码</text><view class="icon cuIcon-back"><view></view></view></view>
+    <view><text>首页密码显示明文</text><view bindtap="ciphertext" class="open {{passwordCiphertext?'active':''}}"><view></view></view></view>
+  </view>
+  <view class="br"></view>
+  <view class="listTitle">账号相关设置</view>
+  <view class="listItem bg-white">
+    <view><text>保存或更新账号自动上传云端</text><view bindtap="automaticCloud" class="open {{userAutomaticCloud?'active':''}}"><view></view></view></view>
+    <view bindtap="bindUploadCloud"><text>本地账号上传到云端</text><view class="icon cuIcon-back"><view></view></view></view>
+    <view bindtap="bindDownCloud"><text>云端账号下载到本地</text><view class="icon cuIcon-back"><view></view></view></view>
+    <view bindtap="bindDeleteCloud"><text>清空云端账号数据</text><view class="icon cuIcon-back"><view></view></view></view>
+    <view bindtap="bindDeleteLocal"><text>清空本地账号数据</text><view class="icon cuIcon-back"><view></view></view></view>
+  </view>
+  <view class="br"></view>
+  <view class="listTitle">外观相关设置</view>
+  <view class="listItem bg-white">
+    <view bindtap="bgcolorSet"><text>选一个喜欢的皮肤吧</text><view class="icon cuIcon-back"><view></view></view></view>
+  </view>
+</view>
+<view class="modal {{modal?'show':''}}">
+  <view class="box">
+    <view class='title'>{{modalobj.title}}</view>
+    <view class="input"><input placeholder="{{modalobj.placeholder}}" type="{{modalobj.type}}" focus="{{focus}}" maxlength="{{modalobj.maxlength}}" bindinput="bindmodalinput" value="{{modalinput}}"></input></view>
+    <!-- <view class="warning">
+      <view>注意1:如果已有云端记录将会被覆盖</view>
+      <view>注意2:请牢记云端密码，忘记将无法恢复云端数据</view>
+    </view> -->
+    <view class='choice'>
+      <view bindtap="hidemodal">取消</view>
+      <view bindtap= '{{modalobj.bindtap}}'>{{modalobj.bindtaptext}}</view>
+    </view>
+  </view>
+</view>
+

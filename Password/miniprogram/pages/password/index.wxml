@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container">
+  <image class="{{keyboard?'show':''}}" src="./images/bg.jpg"></image>
+</view>
+<!-- showModal -->
+<!-- hideModal -->
+<view wx:if="{{keyboard}}" class="modal {{keyboard?'show':''}}">
+  <view>{{title}}</view>
+  <view>
+    <view wx:for="{{pass}}" wx:key='index' class="{{item?'active':''}}"></view>
+  </view>
+  <view class="box">
+    <view wx:for="{{number}}" wx:for-item="numberitem" wx:key=''>
+      <button bindtap="num" hover-class="hover" wx:for="{{numberitem}}" wx:key='' data-num="{{item}}">{{item}}</button>
+    </view>
+  </view>
+</view>

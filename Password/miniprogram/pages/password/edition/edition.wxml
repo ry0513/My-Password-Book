@@ -1,0 +1,81 @@
+<!--miniprogram/pages/password/edition/edition.wxml-->
+<cu-custom bgColor="{{bgColor}}" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">版本日志</view>
+</cu-custom>
+
+<view class="edition">
+  <view class="left">
+    <view class="{{bgColor}}"></view>
+    <view class="{{bgColor}}"></view>
+    <view class="{{bgColor}}"></view>
+  </view>
+  <view class="right">
+    <view class="{{bgColor}}">
+      <view><text class="{{bgColor}}">2019/09/29</text><text class="{{fontColor}}">v1.0.3</text></view>
+      <view>
+        <view style="font-weight:700">全新设置页面</view>
+        <view>1.可以修改登录密码</view>
+        <view>2.支持搜索名称</view>
+        <view>3.增加上传云端账号功能(采用ASE加密，使用时需要设置云端密码，详情请看使用说明)</view>
+        <view>4.增加恢复云端账号功能</view>
+        <view>5.增加清空云端账号功能</view>
+        <view>5.增加清空本地账号功能</view>
+        <view>6.增加外观选择(如需自定义外观请联系开发者)</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="edition">
+  <view class="left">
+    <view class="{{bgColor}}"></view>
+    <view class="{{bgColor}}"></view>
+    <view class="{{bgColor}}"></view>
+  </view>
+  <view class="right">
+    <view class="{{bgColor}}">
+      <view><text class="{{bgColor}}">2019/09/24</text><text class="{{fontColor}}">v1.0.2</text></view>
+      <view>
+        <view>1.添加密码登录方式</view>
+        <view>2.增加使用帮助</view>
+        <view>2.增加客服功能</view>
+        <view>3.优化界面(采取自定义顶部)</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="edition">
+  <view class="left">
+    <view class="{{bgColor}}"></view>
+    <view class="{{bgColor}}"></view>
+    <view class="{{bgColor}}"></view>
+  </view>
+  <view class="right">
+    <view class="{{bgColor}}">
+      <view><text class="{{bgColor}}">2019/09/22</text><text class="{{fontColor}}">v1.0.1</text></view>
+      <view>
+        <view>1.添加点击卡片复制账号或密码的功能</view>
+        <view>2.增加【其他】页面</view>
+        <view>3.优化部分名称</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="edition">
+  <view class="left">
+    <view class="{{bgColor}}"></view>
+    <view class="{{bgColor}}"></view>
+    <view class="{{bgColor}}"></view>
+  </view>
+  <view class="right">
+    <view class="{{bgColor}}">
+      <view><text class="{{bgColor}}">2019/09/19</text><text class="{{fontColor}}">v1.0.0</text></view>
+      <view>
+        <view>1.0基础版本上线</view>
+      </view>
+    </view>
+  </view>
+</view>

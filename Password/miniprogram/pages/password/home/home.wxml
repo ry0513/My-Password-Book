@@ -1,0 +1,26 @@
+<cu-custom bgColor="{{bgColor}}">
+  <view slot="content">小雁南殇的密码本本</view>
+</cu-custom>
+<view class="container">
+  <view class="titlebox">
+    <button class="{{bgColor}}">首页</button>
+    <button bindtap="addpassword" class="bg-white">添加</button>
+    <button bindtap="setting" class="bg-white">设置</button>
+    <button bindtap="about" class="bg-white">其他</button>
+  </view>
+  <view class="input">
+    <input placeholder="支持模糊搜索名称~~" value="" bindinput="bindinput"></input>
+  </view>
+  <view class="card" wx:for = "{{list}}" wx:key = "">
+    <view class="title">
+      <view bindtap="copyname" data-copy="{{'账号：'+item.nicename+'     密码：'+item.password}}"><text class="{{bgColor}}"></text>{{item.name}}</view>
+      <view data-index="{{index}}" class="cuIcon-caidan" bindtap="menu"></view>
+    </view>
+    <view class="cardbox">
+      <view bindtap="copynicename" data-copy="{{item.nicename}}">账号：{{item.nicename}}</view>
+      <view wx:if="{{passwordCiphertext}}" bindtap="copypassword" data-copy="{{item.password}}">密码：{{item.password}}</view>
+      <view wx:else bindtap="copypassword" data-copy="{{item.password}}">密码：＊＊＊＊＊＊＊＊＊＊</view>
+      <view>备注：{{item.remarks}}</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,91 @@
+
+page{
+  background: #F9F9F9;
+}
+.container{
+  padding: 20rpx 30rpx;
+}
+.titlebox{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.titlebox>button{
+  text-align: center;
+  padding: 0 1.2em;
+  font-size: 32rpx;
+  border-radius: 5px;
+  border: 1rpx solid #EAEAEA;
+}
+.titlebox>button:first-child{
+  margin-left: 0;
+}
+.titlebox>button:last-child{
+  margin-right: 0;
+}
+.titlebox>button:after {
+  border: none;
+}
+.titlebox>button:first-child{
+  color: #ffffff;
+}
+input{
+  background: #ffffff;
+  font-size: 28rpx;
+  padding: 0.5em 1em;
+  border: 1rpx solid #EAEAEA;
+  margin-bottom: 20rpx;
+  height: auto;
+  border-radius: 10rpx;
+}
+.card{
+  background: #ffffff;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 2rpx 1rpx rgba(0, 0, 0, 0.1)
+}
+.card{
+  background: #ffffff;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 0 2rpx 1rpx rgba(0, 0, 0, 0.1)
+}
+.card .title{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1rpx solid #EAEAEA; 
+}
+.card .title>view{
+  font-size: 30rpx;
+  padding: 20rpx 60rpx;
+  position: relative;
+}
+.card .title>view:first-child text{
+  font-size: 30rpx;
+  width: 8rpx;
+  top: 27.5rpx;
+  left: 30rpx;
+  height: 1em;
+  position: absolute;
+}
+.card .title>view:last-child{
+  width: 60rpx;
+  font-weight: 700;
+  font-size: 36rpx;
+}
+.card .title>view:last-child image{
+  width: 100%;
+  height: 100%;
+}
+.cardbox{
+  padding: 0 30rpx;
+  color: #777777;
+}
+.cardbox>view{
+  font-size: 28rpx;
+  padding: 0.5rem 0;
+  border-bottom: 1rpx solid #EAEAEA;
+}
+.cardbox>view:last-child{
+  border-bottom: none;
+}

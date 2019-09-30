@@ -1,0 +1,58 @@
+page{
+  background: #F9F9F9;
+}
+.container{
+  padding: 20rpx 30rpx;
+}
+.card{
+  background: #ffffff;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  border: #EAEAEA solid 1rpx;
+}
+.card>view:first-child{
+  font-size: 32rpx;
+  font-weight: 700;
+  border-bottom: 1rpx solid #EAEAEA; 
+  padding: 40rpx 60rpx;
+  position: relative;
+  color: #111111;
+}
+.card>view:first-child>text{
+  font-size: 36rpx;
+  width: 8rpx;
+  top: 45.5rpx;
+  left: 30rpx;
+  height: 1em;
+  position: absolute;
+}
+.cardbox{
+  padding: 0 30rpx 30rpx;
+}
+.cardbox>view{
+  font-size: 28rpx;
+  border-bottom: 1rpx solid #EAEAEA;
+  display: flex;
+}
+.cardbox>view>text{
+  display: inline-block;
+  line-height: 100rpx;
+  padding-right: 10rpx;
+}
+.cardbox>view>text::before{
+  content: "*";
+  color: red;
+}
+.cardbox>view:last-child>text::before{
+  content: "";
+  color: red;
+}
+.cardbox>view>input{
+  display: inline-block;
+  height: 100rpx;
+  flex-grow:1;
+  color: #555555;
+}
+button{
+  color:#eeeeee;
+}

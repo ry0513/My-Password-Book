@@ -1,0 +1,117 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": true,
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.0",
+	"appid": "wx91befaed29af6c84",
+	"projectname": "passwordColorUi",
+	"miniprogramRoot": "miniprogram/",
+	"cloudfunctionRoot": "cloudfunctions/",
+	"cloudfunctionTemplateRoot": "cloudfunctionTemplate",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": 0,
+					"name": "添加密码",
+					"pathName": "pages/password/add/add",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "更新密码",
+					"pathName": "pages/password/update/update",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "设置",
+					"pathName": "pages/password/setting/setting",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "密码首页",
+					"pathName": "pages/password/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "密码说明",
+					"pathName": "pages/password/about/about",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "版本",
+					"pathName": "pages/password/edition/edition",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "皮肤",
+					"pathName": "pages/password/bgColor/bgColor",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "使用帮助",
+					"pathName": "pages/password/help/help",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

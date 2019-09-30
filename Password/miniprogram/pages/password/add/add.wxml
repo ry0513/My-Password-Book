@@ -1,0 +1,16 @@
+<cu-custom bgColor="{{bgColor}}" isBack="{{true}}">
+  <view slot="backText">返回</view>
+  <view slot="content">添加账号</view>
+</cu-custom>
+<view class="container">
+  <view class="card">
+    <view><text class="{{bgColor}}"></text>添加密码</view>
+    <view class="cardbox">
+      <view><text>名称：</text><input bindinput="name" value="{{name}}" focus="{{false}}" placeholder="名称（如腾讯QQ）"></input></view>
+      <view><text>账号：</text><input bindinput="nicename" value="{{nicename}}" placeholder="请输入账号"></input></view>
+      <view><text>密码：</text><input bindinput="password" value="{{password}}" placeholder="请输入密码"></input></view>
+      <view><text decode="{{true}}">&nbsp;&nbsp;备注：</text><input bindinput="remarks" value="{{remarks}}" placeholder="备注（如网址）"></input></view>
+    </view>
+  </view>
+  <button bindtap="up" class="{{bgColor}}">保存账号</button>
+</view>
