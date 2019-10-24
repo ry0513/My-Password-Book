@@ -100,7 +100,7 @@ page{
   width: 80vw;
   position: absolute;
   background: #fff;
-  top:40%;
+  top:35%;
   left: calc(50% - 40vw);
   border-radius: 5rpx;
 }

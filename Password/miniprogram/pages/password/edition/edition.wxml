@@ -12,6 +12,22 @@
   </view>
   <view class="right">
     <view class="{{bgColor}}">
+      <view><text class="{{bgColor}}">2019/10/08</text><text class="{{fontColor}}">v1.0.4</text></view>
+      <view>
+        <view>1.修复无法取消自动上传的bug</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="edition">
+  <view class="left">
+    <view class="{{bgColor}}"></view>
+    <view class="{{bgColor}}"></view>
+    <view class="{{bgColor}}"></view>
+  </view>
+  <view class="right">
+    <view class="{{bgColor}}">
       <view><text class="{{bgColor}}">2019/09/29</text><text class="{{fontColor}}">v1.0.3</text></view>
       <view>
         <view style="font-weight:700">全新设置页面</view>

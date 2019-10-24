@@ -1,9 +1,10 @@
 /* miniprogram/pages/password/help/help.wxss */
 .help{
   padding: 20rpx;
-  line-height: 36rpx;
+  line-height: 40rpx;
   font-size: 28rpx;
 }
 .fw{
-  font-weight: 700
+  font-weight: 700;
+  padding-bottom: 10rpx;
 }

@@ -126,7 +126,7 @@ App({
 
   globalData: {
     userInfo: null,
-    version: "1.0.3",
+    version: "1.0.4",
     userSet: {
       passwordCiphertext:false,
       userAutomaticCloud:false,

@@ -42,37 +42,18 @@ Page({
   //弹出修改登陆密码
   binduser_password() {
     let that = this;
-    wx.getStorage({
-      key: 'user_password',
-      success(res) {
-        that.setData({
-          modalobj: {
-            title: '修改登陆密码',
-            placeholder: '请输入4位登陆密码',
-            maxlength: 4,
-            type: 'number',
-            bindtap: 'user_password',
-            bindtaptext: '修改'
-          }
-        })
-      },
-      fail(res) {
-        that.setData({
-          modalobj: {
-            title: '设置登陆密码',
-            placeholder: '请输入4位登陆密码',
-            maxlength: 4,
-            type: 'number',
-            bindtap: 'user_password',
-            bindtaptext: '确定'
-          }
-        })
-      }
-    })
     that.setData({
       modal: true,
       focus: true,
       modalinput: '',
+      modalobj: {
+        title: '设置登陆密码',
+        placeholder: '请输入4位登陆密码',
+        maxlength: 4,
+        type: 'number',
+        bindtap: 'user_password',
+        bindtaptext: '确定'
+      }
     })
   },
   //修改登陆密码
@@ -116,7 +97,7 @@ Page({
     })
     app.globalData.userSet.passwordCiphertext = that.data.passwordCiphertext;
   },
-  //自动上传
+  //弹出自动上传
   automaticCloud(){
     if (!this.data.hasUserInfo) {
       wx.showToast({
@@ -126,6 +107,7 @@ Page({
       return false;
     }
     let that = this
+    console.log(that.data.userAutomaticCloud)
     if (that.data.userAutomaticCloud){
       that.autoCloud();
       return false;
@@ -144,11 +126,20 @@ Page({
       }
     })
   },
-  //autoCloud
+  //自动上传
   autoCloud(){
     var that = this;
+    let key = that.data.modalinput;
+    
     let pass = that.data.modalinput;
     if (!that.data.userAutomaticCloud){
+      if (key.length != 6) {
+        wx: wx.showToast({
+          title: '--请检查位数--',
+          icon: 'none'
+        })
+        return false;
+      }
       wx.setStorage({
         key: "passwordCloud",
         data: pass
@@ -366,7 +357,8 @@ Page({
   //取消模态窗
   hidemodal(){
     this.setData({
-      modal: false
+      modal: false,
+      focus: false
     })
   },
   //挑选皮肤

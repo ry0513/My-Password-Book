@@ -127,41 +127,20 @@ Page({
   onLoad: function () {
     let that = this;
     const updateManager = wx.getUpdateManager()
-    wx.getStorage({
-      key: 'version',
-      success(res) {
-        if (res.data != app.globalData.version){
-          wx.showModal({
-            title: '新版本' + that.data.version + '来袭',
-            content: '点击版本号查看更新日志',
-            showCancel:false,
-            success(res) {
-              if (res.confirm) {
-                wx.setStorage({
-                  key: "version",
-                  data: app.globalData.version
-                })
-              } 
-            }
-          })
-        }
-      },
-      fail(res) {
+
+    updateManager.onCheckForUpdate(function (res) {
+      // 请求完新版本信息的回调
+      console.log(res.hasUpdate)
+      if (res.hasUpdate){
         wx.showModal({
           title: '新版本' + that.data.version + '来袭',
           content: '点击版本号查看更新日志',
-          showCancel: false,
-          success(res) {
-            if (res.confirm) {
-              wx.setStorage({
-                key: "version",
-                data: app.globalData.version
-              })
-            }
-          }
+          showCancel: false
         })
       }
     })
+
+    
     wx.getStorage({
       key: 'password',
       success(res) {
